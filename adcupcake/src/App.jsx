@@ -2,9 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Cupcake from './components/Cupcake'
-import { cupcakes } from './data/Cupcakes'
+import Cupcake from './components/cards/Cupcake'
 import { ToastContainer } from 'react-toastify'
+import Navbar from './components/sections/Navbar'
+import Home from './components/pages/Home'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,16 +14,11 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1 className='font-extrabold text-5xl mb-8'>Tienda de Cupcakes</h1>
+      <Navbar />
 
-        <div className='grid grid-cols-3 gap-8'>
-          {cupcakes.map(cupcake => (
-            <Cupcake cupcake={cupcake} key={cupcake.id} />
-          ))}
-        </div>
+      <Home />
 
-      </div >
+      {/* Mensaje del toast */}
       <ToastContainer />
     </>
   )

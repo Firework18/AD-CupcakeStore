@@ -44,6 +44,60 @@
             "sabor": "Frutal",
             "stock": 10,
             "imagen": "cupcake-fresa.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Cupcake de Caramelo Salado",
+            "descripcion": "Suave cupcake de vainilla relleno de caramelo salado con frosting cremoso y ligero toque marino.",
+            "precio": 10.0,
+            "sabor": "Dulce-Salado",
+            "stock": 14,
+            "imagen": "cupcake-caramelo-salado.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Cupcake de Oreo",
+            "descripcion": "Esponjoso cupcake de chocolate con trozos de galleta Oreo y frosting cookies & cream irresistible.",
+            "precio": 9.8,
+            "sabor": "Cookies & Cream",
+            "stock": 18,
+            "imagen": "cupcake-oreo.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Cupcake de Limón",
+            "descripcion": "Cupcake ligero de limón natural con glaseado brillante y refrescante toque ácido.",
+            "precio": 8.7,
+            "sabor": "Cítrico",
+            "stock": 11,
+            "imagen": "cupcake-limon.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Cupcake de Coco",
+            "descripcion": "Delicado cupcake de coco con relleno cremoso y topping espolvoreado con coco tostado.",
+            "precio": 9.2,
+            "sabor": "Tropical",
+            "stock": 9,
+            "imagen": "cupcake-coco.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "Cupcake de Café",
+            "descripcion": "Intenso cupcake infusionado con café premium y frosting suave con notas de espresso.",
+            "precio": 10.2,
+            "sabor": "Café",
+            "stock": 13,
+            "imagen": "cupcake-cafe.jpg"
+        },
+        {
+            "id": 11,
+            "nombre": "Cupcake de Limon",
+            "descripcion": "Esponjoso cupcake de limon natural con glaseado cítrico suave y toque de ralladura fresca.",
+            "precio": 10,
+            "sabor": "Cítrico",
+            "stock": 2,
+            "imagen": "cupcake-naranja.jpg"
         }
     ]
 }

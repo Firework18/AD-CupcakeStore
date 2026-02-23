@@ -8,7 +8,7 @@ export default function Hero() {
                 className="hero h-96"
                 style={{
                     backgroundImage:
-                        "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+                        "url('/img/portada.jpg')",
                 }}
             >
                 <div className="hero-overlay"></div>

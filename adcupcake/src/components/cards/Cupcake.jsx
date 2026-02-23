@@ -1,9 +1,10 @@
 import React, { Component, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
+import { cupcakes } from '../../data/Cupcakes'
 
 export default function Cupcake({ cupcake }) {
 
-    const { nombre, imagen, sabor, id, stock, precio, descripcion } = cupcake
+    const { nombre, imagen, sabor, stock, precio, descripcion } = cupcake
 
     const [stockC, setStockC] = useState(stock)
     const [disponible, setDisponible] = useState(true)
@@ -35,23 +36,23 @@ export default function Cupcake({ cupcake }) {
 
     return (
         <>
-            <div class="card bg-base-100 w-96 shadow-sm hover:scale-105 transition-all py-5">
+            <div className="card bg-base-100 w-96 shadow-sm hover:scale-105 transition-all py-5">
                 <figure>
                     <img
                         src={`../../public/img/${imagen}`}
                         alt="Shoes"
                         className='rounded-xl h-60 w-70' />
                 </figure>
-                <div class="card-body">
-                    <h2 class="card-title">
+                <div className="card-body">
+                    <h2 className="card-title">
                         {nombre}
-                        <div class={`badge badge-${disponible ? 'primary' : 'secondary'}`}>{disponible ? 'Disponible' : 'Agotado'}</div>
-                        <div class="badge badge-warning text-xs py-4">{sabor}</div>
+                        <div className={`badge bg-${disponible ? 'success' : 'secondary'}`}>{disponible ? 'Disponible' : 'Agotado'}</div>
+                        <div className="badge badge-warning text-xs py-4">{sabor}</div>
                     </h2>
                     <p>{descripcion}</p>
                     <div className='text-2xl font-extrabold'>Precio: <div className='badge badge-success text-2xl p-5 font-extrabold text-white'>S/. {precio}</div>
                     </div>
-                    <div class="card-actions justify-end">
+                    <div className="card-actions justify-end">
 
                     </div>
                 </div>

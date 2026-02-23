@@ -3,6 +3,9 @@ import Cupcake from '../cards/Cupcake'
 import { cupcakes } from '../../data/Cupcakes'
 import { useCupcakes } from '../../hooks/useCupcakes'
 import { toast } from 'react-toastify'
+import NotFound from '../ui/NotFound'
+import Loading from '../ui/Loading'
+import LostConnection from '../ui/LostConnection'
 
 export default function Store() {
 
@@ -13,48 +16,53 @@ export default function Store() {
     const filtered = datos.filter(cupcake =>
         cupcake.nombre.toLowerCase().includes(search.toLowerCase())
     )
-
-    if (error) {
-        toast.error('Hubo un error')
-    }
-    if (loading) {
-        return <span className="loading loading-spinner loading-xl"></span>
-    }
-    if (!datos || datos.length === 0) {
-        return <div>No hay productos</div>
-    }
-
-
     return (
         <div className='mb-20'>
             <div className='container mx-auto text-center'>
 
-                {filtered.length === 0 ? <span className="loading loading-bars loading-xl"></span>
-                    :
-                    <div>
-                        <h1 className='my-10'><p className='badge badge-secondary text-4xl font-extrabold p-5'>Compra tus Cupcakes</p></h1>
 
-                        <div className="join gap-2 mb-10">
-                            <div className='self-center'>Introduzca su búsqueda: </div>
-                            <div>
-                                <label className="input validator join-item">
+                <div>
+                    <h1 className='my-10'><p className='badge badge-secondary text-4xl font-extrabold p-5'>Compra tus Cupcakes</p></h1>
 
-                                    <input type="text" placeholder="Cupcake de ..." required
-                                        value={search}
-                                        onChange={(e) => setSearch(e.target.value)}
-                                    />
-                                </label>
-                                <div className="validator-hint hidden">Ingresa un nombre válido</div>
-                            </div>
-                        </div>
+                    <div className="join gap-2 mb-10">
+                        <div className='self-center'>Introduzca su búsqueda: </div>
+                        <div>
+                            <label className="input validator join-item">
 
-                        <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10'>
-                            {filtered.map(cupcake => (
-                                <Cupcake cupcake={cupcake} key={cupcake.id} />
-                            ))}
+                                <input type="text" placeholder="Cupcake de ..." required
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                            </label>
+                            <div className="validator-hint hidden">Ingresa un nombre válido</div>
                         </div>
                     </div>
-                }
+
+                    {loading && (
+                        <div className='flex justify-center'><Loading /></div>)}
+
+                    {error && (
+                        <LostConnection />
+                    )}
+
+
+                    {!loading && !error && filtered.length === 0 && (
+                        <div className='flex justify-center'>
+                            <NotFound />
+                        </div>
+                    )}
+
+
+                    <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10'>
+                        {filtered.map(cupcake => (
+                            <Cupcake cupcake={cupcake} key={cupcake.id} />
+                        ))}
+                    </div>
+
+
+
+                </div>
+
             </div>
         </div>
     )

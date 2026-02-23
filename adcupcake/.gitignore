@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# No subir imágenes
+public/img/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -9,9 +9,9 @@ export default function Navbar() {
             </div>
             <div className="flex-none font-bold text-white">
                 <ul className="menu menu-horizontal px-1">
-                    <li><NavLink to="/" exact>Inicio</NavLink></li>
-                    <li><NavLink to="/store" exact>Tienda</NavLink></li>
-                    <li><NavLink to="/about" exact>Nosotros</NavLink></li>
+                    <li><NavLink to="/" end>Inicio</NavLink></li>
+                    <li><NavLink to="/store" end>Tienda</NavLink></li>
+                    <li><NavLink to="/about" end>Nosotros</NavLink></li>
                     {/* <li>
                         <details>
                             <summary>Parent</summary>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Cupcake from '../cards/Cupcake'
 import { cupcakes } from '../../data/Cupcakes'
 import { useCupcakes } from '../../hooks/useCupcakes'
+import { toast } from 'react-toastify'
 
 export default function Store() {
 
@@ -13,6 +14,15 @@ export default function Store() {
         cupcake.nombre.toLowerCase().includes(search.toLowerCase())
     )
 
+    if (error) {
+        toast.error('Hubo un error')
+    }
+    if (loading) {
+        return <span className="loading loading-spinner loading-xl"></span>
+    }
+    if (!datos || datos.length === 0) {
+        return <div>No hay productos</div>
+    }
 
 
     return (
@@ -45,8 +55,6 @@ export default function Store() {
                         </div>
                     </div>
                 }
-
-
             </div>
         </div>
     )

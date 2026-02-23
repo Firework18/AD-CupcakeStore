@@ -7,9 +7,9 @@ export default function Store() {
 
     const [search, setSearch] = useState('')
 
-    const { cupcakes, loading, error } = useCupcakes()
+    const { datos, loading, error } = useCupcakes('/cupcakes')
 
-    const filtered = cupcakes.filter(cupcake =>
+    const filtered = datos.filter(cupcake =>
         cupcake.nombre.toLowerCase().includes(search.toLowerCase())
     )
 

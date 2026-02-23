@@ -6,7 +6,7 @@ import { useCupcakes } from '../../hooks/useCupcakes'
 
 export default function Home() {
 
-    const { cupcakes } = useCupcakes("?sabor:eq=Cítrico")
+    const { datos } = useCupcakes("/cupcakes?sabor:eq=Cítrico")
 
     return (
         <>
@@ -15,7 +15,7 @@ export default function Home() {
                 <h1 className='my-10'><p className='badge badge-secondary text-4xl font-extrabold p-5'>El sabor más vendido</p></h1>
 
                 <div className='grid grid-cols-3 gap-10 self-center'>
-                    {cupcakes.map(cupcake =>
+                    {datos.map(cupcake =>
                         <Cupcake cupcake={cupcake} key={cupcake.id} />
 
                     )}

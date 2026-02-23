@@ -99,5 +99,37 @@
             "stock": 2,
             "imagen": "cupcake-naranja.jpg"
         }
+    ],
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "Curso Básico de Cupcakes",
+            "descripcion": "Aprende desde cero a preparar, hornear y decorar cupcakes clásicos. Ideal para principiantes que desean iniciar en la repostería."
+        },
+        {
+            "id": 2,
+            "nombre": "Taller de Decoración con Buttercream",
+            "descripcion": "Domina técnicas de manga pastelera, flores, degradados y acabados profesionales con crema de mantequilla."
+        },
+        {
+            "id": 3,
+            "nombre": "Curso de Repostería Creativa para Niños",
+            "descripcion": "Un taller divertido donde los más pequeños aprenden a decorar cupcakes y galletas mientras desarrollan su creatividad."
+        },
+        {
+            "id": 4,
+            "nombre": "Masterclass de Tortas Temáticas",
+            "descripcion": "Aprende a diseñar y estructurar tortas personalizadas para cumpleaños, bodas y eventos especiales."
+        },
+        {
+            "id": 5,
+            "nombre": "Taller de Postres Saludables",
+            "descripcion": "Descubre cómo preparar postres bajos en azúcar, sin gluten o veganos sin perder sabor ni presentación."
+        },
+        {
+            "id": 6,
+            "nombre": "Curso Intensivo de Emprendimiento en Repostería",
+            "descripcion": "Aprende a calcular costos, fijar precios, crear tu marca y vender tus productos de repostería con éxito."
+        }
     ]
 }
